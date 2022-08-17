@@ -176,6 +176,7 @@
     justify-content: space-between;
   }
   &__title{
+    display: inline-block;
     font-weight: 500;
     font-size: 35px;
     line-height: 42px;
@@ -253,19 +254,19 @@
   margin-bottom: 130px;
   &__item {
     display: flex;
-    gap:100px;
     justify-content: space-between;
-    margin-bottom: 30px;
+    gap: 30px;
+    margin-bottom: 100px;
   }
-  &__img {
+  &__images {
     width: 48%;
     height: auto;
     object-fit: cover;
-    //margin-right: 100px;
   }
   &__content{
     width: 48%;
     position: relative;
+    padding-left: 40px;
   }
   &__subtitle{
     max-width: 360px;
@@ -282,9 +283,10 @@
     position: absolute;
     bottom: 20px;
     left: 0;
+    padding-left: 40px;
   }
-  &__content:last-child{
-    order: -1;
+  &__item:nth-child(2n){
+    flex-direction: row-reverse;
   }
 }
 
@@ -293,58 +295,73 @@
 
 
 .visit {
+  margin-bottom: 150px;
   &__gallery {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    row-gap: 250px;
+    row-gap: 50px;
     column-gap: 20px;
   }
-
-
 
   &__img{
     display: block;
     width: 100%;
-    height: 100%;
+    height: 377px;
     object-fit: cover;
   }
-  &__item{
-    display: block;
+
+  &__links{
     position: relative;
-  }
-  &__link{
-    display: flex;
-    align-items: flex-end;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
     &:hover{
       .visit__overlay{
         height: 100%;
       }
     }
   }
+  &__link{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+  }
+
   &__overlay{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 55px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 15px 25px;
+    align-items: flex-end;
+    padding: 0 25px 15px 25px;
     background: rgba(21, 24, 36, 0.6);
     font-weight: 500;
     font-size: 18px;
     color: #FFFFFF;
     text-transform: uppercase;
-    transition: .3s ease;
     width: 100%;
+    transition: .3s ease;
   }
   &__overlay-social{
     display: flex;
   }
   &__overlay-likes{
-    margin-right: 35px;
+    margin-right: 15px;
+    &:after{
+      content: url("../images/likes.png");
+      margin-left: 8px;
+    }
   }
+  &__overlay-comments{
+    &:after{
+      content: url("../images/comments.png");
+      margin-left: 8px;
+    }
+  }
+
   &__text{
     margin-top: 45px;
     margin-bottom: 30px;
@@ -364,6 +381,25 @@
   }
 }
 
+.video__popup{
+  background-image: url("../images/content/video.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+  margin: 0 auto 0 0;
+  padding: 250px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &-imgbtn path{
+    transition: .3s ease;
+  }
+  &-imgbtn:hover path{
+    fill: gray;
+  }
+}
+
 
 
 
@@ -375,7 +411,7 @@
 
 
   .footer{
-    margin-top: 400px;
+    //margin-top: 400px;
     background-color: #0E1D28;
     &__container{
       display: flex;
