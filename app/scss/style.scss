@@ -1,6 +1,6 @@
-@import 'reset';
-@import 'libs';
-@import 'global';
+@import '_reset';
+@import '_libs';
+@import '_global';
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;500;700&display=swap');
 
 
@@ -162,7 +162,7 @@
     padding-left: 30px;
   }
   &:hover{
-    font-weight: 900;
+    text-decoration: underline;
   }
 }
 
@@ -445,3 +445,71 @@
     }
   }
 
+
+
+  .menu-small {
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 20px rgba(21, 24, 36, 0.15993);
+    padding: 15px 15px 0 15px;
+    height: max-content;
+    display: none;
+  }
+  .menu-small.active{
+    display: block;
+  }
+  .menu-small__list-link{
+    display: block;
+    color: #102746;
+    margin-bottom: 10px;
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+
+.menu-close__btn{
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  position: relative;
+  display: none;
+}
+
+
+.menu-close__line:first-child {
+  top: 0;
+}
+.menu-close__line:last-child {
+  top: auto;
+  bottom: 0;
+}
+
+.menu-close__line{
+  position: absolute;
+  width: 30px;
+  height: 2px;
+  left: 50%;
+  transform: translateX(-50%);
+  top: calc(50% - 1px);
+  background-color: #FFFFFF;
+  z-index: 5;
+}
+
+
+.menu-close__line{
+  transition: .3s ease;
+}
+
+.menu-close__btn.active :nth-child(n){
+  transform: rotate(45deg);
+  top: calc(50% - 1px);
+}
+
+.menu-close__btn.active :nth-child(2n){
+  widows: 0;
+}
+
+.menu-close__btn.active :nth-child(3n){
+  transform: rotate(-45deg);
+}
+
+  @import '_media';
