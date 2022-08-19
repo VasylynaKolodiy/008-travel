@@ -1,18 +1,20 @@
 @media(max-width: 1360px) {
   .benefits__container {
-    padding: 20px;
+    padding: 15px;
     max-width: 1000px;
-  }
-
-  .places__form {
-    margin-bottom: 50px;
   }
 }
 
 @media(max-width: 1080px) {
 
+  .visit__text {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .visit__item{
+    margin-bottom: 30px;
+  }
   .places__form{
-    margin-bottom: 50px;
     &-input{
       width: max-content;
       padding: 0 10px 5px 5px;
@@ -27,35 +29,30 @@
       font-size: 16px;
     }
   }
-  .header__inner {
-    padding: 62px 100px 0 100px;
-  }
-  .menu__list {
-    margin-bottom: 75px;
-  }
+ 
   .places__title {
     font-size: 36px;
   }
 
   .benefits__container {
-    margin-bottom: 30px;
+    margin-bottom: 70px;
     max-width: 800px;
   }
   .benefits__title {
     font-size: 36px;
-    margin-bottom: 30px;
+    margin-bottom: 70px;
   }
   .prefecture__subtitle {
-    margin-bottom: 30px;
+    margin-bottom: 70px;
   }
   .get-inspired {
-    margin-bottom: 30px;
+    margin-bottom: 70px;
   }
   .prefecture__item {
-    margin-bottom: 30px;
+    margin-bottom: 70px;
   }
   .prefecture {
-    margin-bottom: 30px;
+    margin-bottom: 70px;
   }
   .visit__gallery {
     grid-template-columns: repeat(2, 1fr);
@@ -69,7 +66,7 @@
     object-fit: cover;
   }
   .visit {
-    margin-bottom: 30px;
+    margin-bottom: 70px;
   }
   .video__popup {
     padding: 150px 0;
@@ -89,15 +86,13 @@
 
 @media(max-width: 980px) {
 
+
   .prefecture__item {
     flex-direction: column;
     justify-content: center;
   }
   .prefecture__item:nth-child(2n){
     flex-direction: column;
-  }
-  .prefecture__content{
-    order: -1;
   }
   .prefecture__support {
     max-width: none;
@@ -115,7 +110,7 @@
   .prefecture__content{
     width: 100%;
     position: relative;
-    padding-left: 40px;
+    padding-left: 15px;
   }
   .prefecture__subtitle {
     max-width: none;
@@ -125,15 +120,24 @@
     margin-bottom: 15px;
     width: 50px;
   }
+  .get-inspired {
+    margin-bottom: 130px;
+  }
+  .prefecture__subtitle {
+    margin-bottom: 20px;
+    margin-top: 0;
+  }
 
-}
+  }
 
 //________________________________________________________
 
 
 @media(max-width: 880px) {
 
-
+  .get-inspired__title{
+    padding-right: 20px;
+  }
 
   .menu__list-item:not(:last-child) {
     margin-right: 22px;
@@ -162,11 +166,15 @@
   }
 
   .benefits__support {
-    margin-bottom: 30px;
+    margin-bottom: 70px;
   }
 
   .benefits__item:not(:last-child) {
     margin-right: 10px;
+  }
+
+  .benefits__learn-more.arrow-link {
+    bottom: 40px;
   }
 
   .get-inspired__item {
@@ -178,14 +186,18 @@
 }
 
 //________________________________________________________
-
+@media(min-width: 780px) {
+  .menu-small {
+    display: none;
+  }
+}
 
 @media(max-width: 780px) {
   .places__form {
     display: flex;
     flex-wrap: wrap;
-    //flex-direction: column;
     justify-content: left;
+    margin-bottom: 100px;
   }
   .places__form-input {
     width: max-content;
@@ -196,16 +208,16 @@
     width: max-content;
   }
   .menu__list{
-    margin-bottom: 30px;
+    margin-bottom: 70px;
   }
   .places__text{
-    margin-bottom: 30px;
+    margin-bottom: 70px;
   }
   .footer__inner-logo {
-    padding: 20px 10px;
+    padding: 15px 10px;
   }
   .footer__inner-menu {
-    padding: 5px 0;
+    padding: 15px 0;
   }
   .footer__container {
     display: flex;
@@ -241,14 +253,18 @@
   }
 
   .prefecture__content{
-    padding-left: 30px;
+    padding-left: 15px;
   }
   .header__inner {
-    padding: 30px 30px 0 30px;
+    padding: 20px 30px 20px 15px;
   }
   .places__container {
-    padding-left: 30px;
+    padding-left: 15px;
+    padding-top: 100px;
   }
+
+
+
 
 
   .menu{
@@ -278,5 +294,55 @@
 
 
 @media(max-width: 580px) {
+  .get-inspired__title{
+    font-size: 16px;
+  }
+   .arrow-link{
+    font-size: 12px;
+    &:after{
+      padding-left: 2px;
+    }
+  }
 
+  .get-inspired__gallery {
+    grid-template-columns: repeat(1, 1fr);
+    grid-auto-rows: 200px;
+  }
+
+  .visit__gallery {
+    grid-template-columns: repeat(1, 1fr);
+    grid-auto-rows: 300px;
+    row-gap: 200px;
+  }
+  .video__popup{
+    margin-top: 200px;
+  }
+  .visit__text {
+    width: 100%;
+    max-width: none;
+  }
+
+
+
+
+
+
+  .benefits__container {
+    max-width: 400px;
+  }
+}
+
+@media(max-width: 480px) {
+  .benefits__container {
+    max-width: 380px;
+  }
+}
+
+@media(max-width: 400px) {
+  .get-inspired__info{
+    flex-direction: column;
+  }
+  .benefits__container {
+    max-width: 300px;
+  }
 }
